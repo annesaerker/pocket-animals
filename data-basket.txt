@@ -1,0 +1,1 @@
+[{"id":"59c6881dabbbd","name":"Giraffe","price":"500kr","image":"images\/productimage-59c6881dabb01.png"},{"id":"59c6885911d9e","name":"Killer Whale","price":"100","image":"images\/productimage-59c6885911d01.png"},{"id":"59d4f104ac8a4","name":"Snake","price":"400","image":"images\/productimage-59d4f104ac81f.png"}]

@@ -1,0 +1,446 @@
+
+/************************************************* GENERAL LAYOUT *****************************************************/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    /* height: 100vh; 
+      overflow: hidden; 
+       display: flex;
+      justify-content: space-between;  */
+}
+
+@font-face {
+    font-family: 'sofachrome';
+    src: url("sofachrome/sofachrome.ttf");
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url("Gotham/Gotham.otf");
+}
+
+@font-face {
+    font-family: 'FuturaLight';
+    src: url("futura_light/FuturaStdLight.ttf");
+}
+
+h1 {
+    padding: 10px 0 0;
+    margin: 0 0 32px;
+    font-size: 40px;
+    color: darkgreen;
+    font-weight: 200;
+    font-family: 'FuturaLight';
+    font-size: 22px;
+}
+
+h1 button {
+    margin-left: 20px;
+}
+
+h2 {
+    font-family: 'FuturaLight';
+}
+
+p {
+    font-size: 15px;
+    font-family: 'FuturaLight';
+}
+
+button {
+    padding: 10px 15px;
+    border: 1px #ccc solid;
+    background-color: lightpink;
+    /* background-color: #fff; */
+    font-size: 18px;
+    /* font-family: 'Montserrat';*/
+    font-weight: 200;
+    text-transform: uppercase;
+    color: white;
+}
+
+button:hover {
+    cursor: pointer;
+    text-shadow: 1px 1px 1px #000, 3px 3px 5px hotpink;
+    color: black;
+}
+
+input {
+    display: block;
+    padding: 10px;
+    width: 100%;
+    border: 1px #ccc solid;
+    margin: 0 0 16px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: hotpink;
+}
+
+/************************************************************** NAV *********************************************************/
+
+nav {
+    background-color: lightpink;
+    height: 7vh;
+    display: flex;
+    z-index: 100;
+    width: 100%;
+}
+
+nav .cNav {
+    display: none;
+}
+
+nav .cNav.displayNav {
+    display: flex;
+    z-index: 101;
+}
+
+/************************************************************** PAGES *********************************************************/
+
+.cPage {
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    color: black;
+    font-size: 50px;
+}
+
+.cPage.displayPage {
+    display: flex;
+    z-index: 1;
+    overflow: scroll !important;
+    flex-direction: column;
+
+}
+
+button.btnShowPage {
+    font-family: 'FuturaLight';
+    font-weight: 200;
+    border: 1px lightpink solid;
+    text-transform: uppercase;
+    background-color: lightpink;
+    color: white;
+    font-size: 12px;
+}
+
+#iPageAdminHome,
+#iPageAdminProducts,
+#iPageAdminUsers,
+#iPageContact,
+#iPageHome,
+#iPageLogin,
+#iPageSaveUser,
+#iPageUserHome,
+#iPageUserProfile,
+#iPageViewBasket,
+#iPageViewProducts {
+    background-color: white;
+}
+
+/*    #iPageHome{
+      background-image: url("images/strips.png");
+    }*/
+
+/* #iPageViewProducts h1 {
+          margin-top: 55vh;
+    } */
+
+/************************************************* ADMINISTRATE USERS/PRODUCTS PAGE ***********************************************/
+
+.create-user-admin,
+.show-all-products,
+.show-all-users,
+.show-single-product,
+.show-single-user {
+    background-color: #eee;
+    border-color: lightpink;
+    border: 20%;
+    border-width: 10px;
+    margin: 15px;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 400px;
+
+}
+
+.create-product,
+.create-user {
+    background-color: #eee;
+    border-color: lightpink;
+    border: 20%;
+    border-width: 10px;
+    margin: 15px;
+    padding: 20px;
+    width: 400px;
+
+}
+
+.edit-single-product {
+    background-color: white;
+    border-color: lightpink;
+    border: 20%;
+    border-width: 10px;
+    margin: 15px;
+    padding: 20px;
+    width: 400px;
+    height: 500px;
+}
+
+.show-single-product img {
+    max-height: 150px;
+    border-radius: 3px;
+}
+
+.product,
+.users {
+    border: 1px white solid;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 8px;
+    background-color: white;
+}
+
+.product .name {
+    font-weight: 700;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.product button {
+    font-size: 16px;
+}
+
+.product-details h2 {
+    font-size: 30px;
+}
+
+.display-products-box {
+    display: flex;
+}
+
+#displayProductsHere .all-products {
+    border: 1px #ccc solid;
+    border-color: #fff;
+    height: 330px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f6f6f6;
+    width: 330px;
+    justify-content: center;
+}
+
+
+.all-product-info {
+    flex-direction: column;
+    text-align: center;
+}
+
+.all-products img {
+    height: 100px;
+}
+
+.all-products h2 {
+    font-size: 30px;
+}
+
+.all-products p {
+    overflow-x: hidden;
+    /* overflow-y: scroll;*/
+    font-size: 15px;
+}
+
+.products-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 90vh;
+    justify-content: center;
+}
+
+.container-admin-products,
+.container-admin-users {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 80vh;
+}
+
+.form-container {
+    background-color: #eee;
+    padding: 15px 60px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.display-product-details {
+    background-color: purple;
+}
+
+.user-details img {
+    height: 200px;
+}
+
+.user-details p {
+    margin-bottom: 10px;
+}
+
+/******************************************************* DISPLAY PROFILE ***************************************************/
+
+.user-profile-details {
+    flex-direction: row;
+    display: flex;
+}
+
+.user-profile-details img {
+    height: 200px;
+}
+
+.user-text-details {
+    background-color: white;
+    padding: 20px;
+    background-color: white;
+    margin-top: 7vh;
+    padding: 30px 60px;
+    margin-right: 30px;
+}
+
+.user-text-details p {
+    margin-bottom: 10px;
+}
+
+/********************************************************** SUBSCRIBE *****************************************************/
+
+.subscribe-container {
+    display: flex;
+    flex-direction: row;
+    width: 350px;
+    margin-bottom: 30px;
+}
+
+.subscribe-container input {
+    margin: 0;
+}
+
+.subscribe-container button {
+    /*      background-color: lightpink;
+      color: white;*/
+}
+
+/****************************************************** VIEW PRODUCTS *****************************************************/
+
+.boxProduct img {
+    width: 250px;
+    height: 250px;
+}
+
+.boxProduct {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% / 3);
+}
+
+#boxProducts {
+    display: flex;
+    width: 100vw;
+    padding: 0 15%;
+}
+
+/********************************************************** BASKET *****************************************************/
+
+#iPgaeViewBasket .form-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+    
+}
+
+.basket-products {
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 30px;
+    align-items: center;
+    display: flex;
+    width: 400px;
+    justify-content: flex-end;
+}
+
+.basket-products p {
+    margin-right: 30px;
+    font-size: 14px;
+}
+
+.basket-products img {
+  height: 50px;
+  margin-right: 30px;
+}
+
+.basket-product-rigth-content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+.basket-product-rigth {
+  /* display: flex;
+  align-items: center; */
+  width: 320px;
+
+
+}
+
+/********************************************************** CONTACT *****************************************************/
+
+#map {
+    width: 30%;
+    height: 40vh;
+}
+/*
+    .contact-footer {
+      width: 100vw;
+      background-color: lightpink;
+      padding: 60px;
+
+    }*/
+
+/*    .message {
+      margin-top: 30vh;
+      background-color: white;
+      padding: 30px 60px;
+    }*/
